@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../consts/style_constant.dart';
@@ -39,7 +38,7 @@ class Categories extends StatelessWidget {
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (contex, index) => Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: CategoryCard(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(

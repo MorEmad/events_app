@@ -36,32 +36,34 @@ class _CustomNavBarWidgetState extends State<CustomNavBarWidget> {
     final navBarProvider = Provider.of<NavBarProvider>(context);
 
     return Scaffold(
+      backgroundColor: Colors.green,
       body: Pages[navBarProvider.selectedIndex],
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        child: SizedBox(
-          height: MyMediaQuery(context).height * 0.075,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ButtonNavBarItem(
-                index: 0,
-                svgIconPath: AppIcons.profile,
-              ),
-              ButtonNavBarItem(
-                index: 1,
-                svgIconPath: AppIcons.heart_outlined,
-              ),
-              ButtonNavBarItem(
-                index: 2,
-                svgIconPath: AppIcons.search,
-              ),
-              ButtonNavBarItem(
-                index: 3,
-                svgIconPath: AppIcons.home,
-              ),
-            ],
-          ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          border: Border(top: BorderSide(width: 1.0, color: Colors.lightBlue.shade600),)
+        ),
+        height: MyMediaQuery(context).height * 0.1,
+        // shape: const CircularNotchedRectangle(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ButtonNavBarItem(
+              index: 0,
+              svgIconPath: AppIcons.profile,
+            ),
+            ButtonNavBarItem(
+              index: 1,
+              svgIconPath: AppIcons.heart_outlined,
+            ),
+            ButtonNavBarItem(
+              index: 2,
+              svgIconPath: AppIcons.search,
+            ),
+            ButtonNavBarItem(
+              index: 3,
+              svgIconPath: AppIcons.home,
+            ),
+          ],
         ),
       ),
     );
